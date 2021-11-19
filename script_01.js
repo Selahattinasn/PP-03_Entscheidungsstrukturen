@@ -12,8 +12,8 @@ isJohnOlder = (ageJohn > ageMark);
 isJohnEqual = (ageJohn == ageMark);
 
 // Ausgabe
-console.log("ageJohn: " + ageJohn);
-console.log("ageMark: " + ageMark);
+// console.log("ageJohn: " + ageJohn);
+// console.log("ageMark: " + ageMark);
 // console.log("isJohnOlder: " + isJohnOlder);
 // console.log("isJohnEqual: " + isJohnEqual);
 
@@ -50,19 +50,52 @@ console.log("ageMark: " + ageMark);
 /************ IF - ELSE IF  ************/
 // mit alternativen Fällen (älter, jünger, gleich alt)
 
-if (isJohnOlder) // John älter
-{
-    console.log("John ist älter."); 
-} 
-// 1. Alternative
-else if(isJohnEqual) // John gleich alt
-{
-    console.log("John ist gleich alt.");
-}
-// 2...n Alternative(n)
+// if (isJohnOlder) // John älter
+// {
+//     console.log("John ist älter."); 
+// } 
+// // 1. Alternative
+// else if(isJohnEqual) // John gleich alt
+// {
+//     console.log("John ist gleich alt.");
+// }
+// // 2...n Alternative(n)
 
-// Alternative
-else  // John jünger
+// // Alternative
+// else  // John jünger
+// {
+//     console.log("John ist jünger."); 
+// }
+
+/****** Fallunterscheidung / CASE|SWITCH 1 ******/
+
+const firstName = "Jane";
+let job;
+
+job = "driver";  // .. fährt TAXI! / UBER
+// job = "diver";  // .. taucht im Rhein!
+// job = "artist";  // .. malt ein Bild!
+// job = "pilot"; // .. macht etwas anderes! --> default
+// job = "teacher"; // .. unterrichtet!
+// job = "instructor"; // .. unterrichtet!
+
+switch (job) 
 {
-    console.log("John ist jünger."); 
+    case "driver":  // Test auf ==
+        console.log(firstName + " fährt TAXI!");
+        break;
+    case "diver":  // Test auf ==
+        console.log(firstName + " taucht im Rhein!");
+        break;
+    case "artist":  // Test auf ==
+        console.log(firstName + " malt ein Bild!");
+        break;
+    case "teacher":  
+    case "instructor":
+        console.log(firstName + " unterrichtet!");
+        break;
+
+    default:  // Black Swan !!!
+        console.log(firstName + " macht etwas anderes!");
+        break;
 }
