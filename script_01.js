@@ -79,23 +79,41 @@ job = "driver";  // .. fährt TAXI! / UBER
 // job = "teacher"; // .. unterrichtet!
 // job = "instructor"; // .. unterrichtet!
 
-switch (job) 
-{
-    case "driver":  // Test auf ==
-        console.log(firstName + " fährt TAXI!");
-        break;
-    case "diver":  // Test auf ==
-        console.log(firstName + " taucht im Rhein!");
-        break;
-    case "artist":  // Test auf ==
-        console.log(firstName + " malt ein Bild!");
-        break;
-    case "teacher":  
-    case "instructor":
-        console.log(firstName + " unterrichtet!");
-        break;
+// switch (job) 
+// {
+//     case "driver":  // Test auf ==
+//         console.log(firstName + " fährt TAXI!");
+//         break;
+//     case "diver":  // Test auf ==
+//         console.log(firstName + " taucht im Rhein!");
+//         break;
+//     case "artist":  // Test auf ==
+//         console.log(firstName + " malt ein Bild!");
+//         break;
+//     case "teacher":  
+//     case "instructor":
+//         console.log(firstName + " unterrichtet!");
+//         break;
 
-    default:  // Black Swan !!!
-        console.log(firstName + " macht etwas anderes!");
+//     default:  // Black Swan !!!
+//         console.log(firstName + " macht etwas anderes!");
+//         break;
+// }
+
+/********  Fallunterscheidung / CASE|SWITCH 2 *******/
+
+const a = 100;
+
+switch (true) {
+    case (a == 1):
+        console.log("a ist 1");
+        break;
+    case (a == 2):
+        console.log("a ist 2");
+        break;
+    // weitere Fälle ....
+    default:
+        console.log("a hat einen anderen Wert");
         break;
 }
+
